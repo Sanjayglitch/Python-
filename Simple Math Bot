@@ -1,0 +1,84 @@
+name = None
+def intro(): 
+    print("Hello I am Aid, I am created in the year of 2020")
+    print()
+    print("I Believe I'm good at math")
+    
+def user_greet():
+    global name
+    print()
+    print("May I know your good name please!!")
+    print()
+    name = str(input())
+    print()
+    print("well! hello",name ,"Let me prove that i know numbers well!!")
+    
+def numbers_intro():
+    global name
+    print(name,"You can type any numbers and i am having th ability to count")
+    print()
+    print("Come On! Enter a number")
+    number = int(input())
+    for i in range(number):
+        print(i,"!")
+        
+def table():
+    global name
+    print(name,"I can do multiplication tables for any number of any length!")
+    print()
+    n = int(input("Enter the number of table you required: "))
+    l = int(input("Enter the series length: "))
+    i =1
+    for i in range(1,l+1):
+        print(n,"X",i,"=",n*i)
+        
+def calc():
+    global name
+    print(name,"And I can do all the calulation operations")
+    print()
+    print("Please select operation \n" 
+        "1. Add\n"  
+        "2. Subtract\n"  
+        "3. Multiply\n" 
+        "4. Divide\n") 
+    import numpy as np
+    select = int(input("Enter a number 1/2/3/4: "))
+    if(select==1):
+        lst = []
+        num = int(input('How many numbers: '))
+        for n in range(num):
+            numbers = int(input('Enter number '))
+            lst.append(numbers)
+        print("Sum of elements in given list is :", np.sum(lst))
+        
+        
+    elif(select == 2):
+        num1 = int(input("Enter number 1 :"))
+        num2 = int(input("Enter number 2: "))
+        
+        print("The subtracted value is:",np.subtract(num1,num2))
+        
+        
+    elif(select==3): 
+        list1 = []
+        num = int(input("How many numbers: "))
+        for n in range(num):
+            numbers = int(input("Enter the num"))
+            list1.append(numbers)
+        print("The product of elements is :",np.prod(list1))
+        
+    elif(select==4):
+        num1 = float(input("Enter number 1:"))
+        num2 = float(input("Enter number 2: "))
+        
+        print("The divided value is:",np.divide(num1,num2))
+        
+        
+        
+def number_word():
+    from num2words import num2words
+    print("It's my last ability")
+    print("I can convert numbers in words")
+    num = int(input("Enter the number you want in words: "))
+    print(num2words(num))
+    
